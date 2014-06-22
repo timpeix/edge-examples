@@ -12,10 +12,6 @@ Challenge: Implement Play, stop and rewind on a symbol
 
 Challenge: Create a symbol that plays a audio file
 
-## 2 Axis Parallax
-
-Challenge: 2 axis parallax scrolling that makes more than just scrubbing one timeline
-
 ## Using the device orientation API
 
 Challenge: Use the device orientation API to influence values in edge

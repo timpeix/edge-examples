@@ -22,7 +22,7 @@ var symbols = {
     scaleToFit: "none",
     centerStage: "none",
     initialState: "Base State",
-    gpuAccelerate: false,
+    gpuAccelerate: true,
     resizeInstances: false,
     content: {
             dom: [
