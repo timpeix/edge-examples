@@ -42,34 +42,26 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // Aliase für häufig
            }
          });
          
+         // execute code when you move the device
          window.addEventListener('devicemotion', function(event) {
-         
-         
-         var ele = sym.getSymbol('sym_quadrant').$('Rectangle');
-         
-         
-         
              e = event;
-         
-                         var x = event.accelerationIncludingGravity.x;
-                         var y = event.accelerationIncludingGravity.y;
-                         var z = event.accelerationIncludingGravity.z;
-                         var r = event.rotationRate;
-         
-                         sym.$('txt_x').html(x);
-                         sym.$('txt_y').html(y);
-                         sym.$('txt_z').html(z);
-         
-         					 sym.$('txt_alpha').html(r.alpha);
-                         sym.$('txt_beta').html(r.beta);
-                         sym.$('txt_gamma').html(r.gamma);
-         
-         // TweenLite.to(ele, 0, {width:100+(Math.abs(r.beta)*10), height:200});
-         
-         
-         TweenLite.to(ele, 2, {rotation:"2.25rad", skewX:"30deg"});
-         
-         
+             
+             // how fast is it moving ? 
+             var x = event.accelerationIncludingGravity.x;
+             var y = event.accelerationIncludingGravity.y;
+             var z = event.accelerationIncludingGravity.z;
+             // how much did we rotate the ipad? 
+             var r = event.rotationRate;
+             // write into the animation
+             var ele = sym.getSymbol('sym_quadrant').$('Rectangle');
+             // acceleration is meassured in G
+             sym.$('txt_x').html(x);
+             sym.$('txt_y').html(y);
+             sym.$('txt_z').html(z);
+             // rotation
+             sym.$('txt_alpha').html(r.alpha);
+             sym.$('txt_beta').html(r.beta);
+             sym.$('txt_gamma').html(r.gamma);
          });
 
       });
