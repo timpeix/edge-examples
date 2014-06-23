@@ -13,7 +13,30 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // Aliase für häufig
    (function(symbolName) {
       
       
+      Symbol.bindElementAction(compId, symbolName, "${_sym_remove}", "click", function(sym, e) {
+         // sym.getSymbol('sym_hello_world').$('rect_hello_world').hide();
+         sym.getSymbol('sym_hello_world').stop();
+
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
+
+   //=========================================================
+   
+   //Edge symbol: 'sym_remove'
+   (function(symbolName) {   
+   
+   })("sym_remove");
+   //Edge symbol end:'sym_remove'
+
+   //=========================================================
+   
+   //Edge symbol: 'sym_hello_world'
+   (function(symbolName) {   
+   
+   })("sym_hello_world");
+   //Edge symbol end:'sym_hello_world'
 
 })(jQuery, AdobeEdge, "EDGE-30797826");

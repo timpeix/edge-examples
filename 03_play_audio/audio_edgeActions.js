@@ -14,6 +14,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // Aliase für häufig
       
       
       Symbol.bindElementAction(compId, symbolName, "${_sym_track_1}", "click", function(sym, e) {
+         sym.getSymbol('sym_track_1').getVariable('audio').play();
          
 
       });
@@ -21,11 +22,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // Aliase für häufig
 
       Symbol.bindElementAction(compId, symbolName, "${_sym_track_2}", "click", function(sym, e) {
          
+         sym.getSymbol('sym_track_1').getVariable('audio').pause();
+         sym.getSymbol('sym_track_2').getVariable('audio').play();
+         sym.getSymbol('sym_track_3').getVariable('audio').pause();
+         
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${_sym_track_3}", "click", function(sym, e) {
+         sym.getSymbol('sym_track_3').getVariable('audio').play();
          
 
       });
@@ -34,9 +40,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // Aliase für häufig
       
 
       Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
-         var adobesound=new Audio();    
+         // use the audio api 
+         var adobesound=new Audio();
+         // where is the audio in the file system 
          adobesound.src="assets_audio/01.mp3";
+         // get me the symbol, that i want to attach the audio to 
          var sym_track_1 = sym.getSymbol('sym_track_1');
+         // store audio in the symbol for later re-use
          sym_track_1.setVariable('audio', adobesound);
          
          var adobesound=new Audio();    
