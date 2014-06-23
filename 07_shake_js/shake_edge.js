@@ -26,7 +26,14 @@ var symbols = {
     resizeInstances: false,
     content: {
             dom: [
-],
+            {
+                id: 'Text2',
+                type: 'text',
+                rect: ['5537', '2636','auto','auto','auto', 'auto'],
+                text: "Foo Bar<br>",
+                align: "left",
+                font: ['Arial, Helvetica, sans-serif', 24, "rgba(0,0,0,1)", "400", "none", "normal"]
+            }],
             symbolInstances: [
 
             ]

@@ -15,20 +15,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // Aliase für häufig
       
       Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
          
-         yepnope({
-           load: ["bower_components/shake.js/shake.js"],
-           callback: {
-             "shake.js": function () {
-         			window.addEventListener('shake', shakeEventDidOccur, false);
-         
-         			//function to call when shake occurs
-         			function shakeEventDidOccur () {
-         
-         				alert('shaken not stirred');
-         			}
-             }
-           }
-         });
 
       });
       //Edge binding end
