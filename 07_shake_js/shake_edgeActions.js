@@ -18,18 +18,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // Aliase für häufig
          yepnope(
          {
          nope:[
-         'bower_components/shake.js/shake.js'
+         'bower_components/shake.js/shake.js',
+         'bower_components/greensock/src/uncompressed/TweenMax.js'
          ],
          complete: init
          }
          );
          //when yepnope has loaded everything execute init();
          function init (){
-         alert('loaded');
          
-         //initialise your variables and Edge comp here
          }
-         
          
          
          
@@ -38,8 +36,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // Aliase für häufig
          
          //function to call when shake occurs
          function shakeEventDidOccur () {
-            alert('shake');
-         	sym.$('Rectangle').hide();
+            // select a dom element 
+         	var ele = sym.getSymbol('Symbol_1').getSymbolElement();
+         	// do animation stuff
+         	// totate by 30 degree and make it a bit smaller  
+         	TweenLite.to(ele, 2, {
+         		rotation:30, 
+         		scaleX:0.8, 
+         		onComplete: function() {
+         			// when the animation is finished
+         			TweenLite.to(ele, 4, {rotation:0, scaleX:2.0});
+         		}
+         	});
+         
+         
          }
          
          // shakeEventDidOccur();

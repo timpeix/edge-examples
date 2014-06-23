@@ -10,4 +10,5 @@ Adobe Edge example for
 ## Links
 
 * https://github.com/alexgibson/shake.js/
+* http://forums.greensock.com/topic/6156-using-greensock-js-in-adobe-edge-tutorial/
 
