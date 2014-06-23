@@ -15,11 +15,48 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // Aliase für häufig
       
       Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
          
+         yepnope(
+         {
+         nope:[
+         'bower_components/shake.js/shake.js'
+         ],
+         complete: init
+         }
+         );
+         //when yepnope has loaded everything execute init();
+         function init (){
+         alert('loaded');
+         
+         //initialise your variables and Edge comp here
+         }
+         
+         
+         
+         
+         
+         
+         
+         //function to call when shake occurs
+         function shakeEventDidOccur () {
+            alert('shake');
+         	sym.$('Rectangle').hide();
+         }
+         
+         // shakeEventDidOccur();
+         window.addEventListener('shake', shakeEventDidOccur, false);
 
       });
       //Edge binding end
 
    })("stage");
    //Edge symbol end:'stage'
+
+   //=========================================================
+   
+   //Edge symbol: 'Symbol_1'
+   (function(symbolName) {   
+   
+   })("Symbol_1");
+   //Edge symbol end:'Symbol_1'
 
 })(jQuery, AdobeEdge, "EDGE-1610104");
