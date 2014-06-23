@@ -30,6 +30,14 @@ var symbols = {
                 id: 'Symbol_1',
                 type: 'rect',
                 rect: ['143', '112','auto','auto','auto', 'auto']
+            },
+            {
+                id: 'Text',
+                type: 'text',
+                rect: ['167', '53','auto','auto','auto', 'auto'],
+                text: "Shake it like its hot!<br>",
+                align: "left",
+                font: ['Arial, Helvetica, sans-serif', 24, "rgba(0,0,0,1)", "400", "none", "normal"]
             }],
             symbolInstances: [
             {
@@ -45,6 +53,12 @@ var symbols = {
                 ["style", "width", '550px'],
                 ["style", "height", '400px'],
                 ["style", "overflow", 'hidden']
+            ],
+            "${_Text}": [
+                ["style", "top", '21px'],
+                ["style", "height", '28px'],
+                ["style", "left", '172px'],
+                ["style", "width", 'auto']
             ]
         }
     },
@@ -55,7 +69,8 @@ var symbols = {
             duration: 0,
             autoPlay: true,
             timeline: [
-            ]
+                { id: "eid9", tween: [ "style", "${_Text}", "left", '172px', { fromValue: '172px'}], position: 0, duration: 0 },
+                { id: "eid8", tween: [ "style", "${_Text}", "top", '21px', { fromValue: '21px'}], position: 0, duration: 0 }            ]
         }
     }
 },

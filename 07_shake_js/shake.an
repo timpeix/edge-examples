@@ -58,6 +58,7 @@
 		"element_${_Text}":{
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
+			"animationEnabled":"true",
 			"timelineColor":"0x008dc8"},
 		"element_${_Rectangle}":{
 			"timelineColor2":"0xd8b467",
@@ -97,7 +98,7 @@
 			"timelineColor3":"0x385063",
 			"animationEnabled":"false",
 			"timelineColor":"0x2f73ad"}},
-	"TransitionIdCounter":"8",
+	"TransitionIdCounter":"12",
 	"CompZoomFactor":"100",
 	"viewStartY":"0",
 	"pixelsPerMs":"0.2",
