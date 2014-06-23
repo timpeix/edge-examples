@@ -19,7 +19,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // Aliase für häufig
            load: ["bower_components/shake.js/shake.js"],
            callback: {
              "shake.js": function () {
-               alert('lala');
+         			window.addEventListener('shake', shakeEventDidOccur, false);
+         
+         			//function to call when shake occurs
+         			function shakeEventDidOccur () {
+         
+         				alert('shaken not stirred');
+         			}
              }
            }
          });
