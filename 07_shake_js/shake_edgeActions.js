@@ -13,6 +13,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // Aliase für häufig
    (function(symbolName) {
       
       
+      Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
+         
+         yepnope({
+           load: ["bower_components/shake.js/shake.js"],
+           callback: {
+             "shake.js": function () {
+               alert('lala');
+             }
+           }
+         });
+
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
 
