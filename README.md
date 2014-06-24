@@ -1,18 +1,13 @@
 # Example Adobe Edge Animate Files with Javascript
 
-## Using a Symbol with Javascript 
+This repo containd specific Examples for adobe edge animate
 
-Challenge: Create and use a symbol programatically
+## Examples
 
-## Play, Stop, Rewind
-
-Challenge: Implement Play, stop and rewind on a symbol
-
-## Play Audio
-
-Challenge: Create a symbol that plays a audio file
-
-## Using the device orientation API
-
-Challenge: Use the device orientation API to influence values in edge
-
+* Use symbols with code
+* play, stop and rewind a timeline with clicks
+* play audio
+* Parallax Scrolling
+* Using Device orientation
+* use the resize event to view different symbols
+* shake the device to trigger something
